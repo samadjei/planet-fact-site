@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio&family=Spartan&display=swap");
+:root {
+  --white: #ffffff;
+  --dark-blue: #070724;
+  --light-grey: #38384f;
+  --grey: #838391;
+  --celestial-blue: #419ebb;
+  --yellow: #eda249;
+  --purple: #6d2ed5;
+  --orange: #d14c32;
+  --red: #d83a34;
+  --dark-orange: #cd5120;
+  --topaz: #1ec1a2;
+  --blue: #2d68f0;
+  --iron: #d8d8d8;
+  --primary-font: "Spartan", sans-serif;
+  --secondary-font: "Antonio", sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 2.57px;
+  line-height: 2.5rem;
+  border-radius: 2.8rem;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.btn--primary {
+  background: transparent;
+  color: var(--white);
+  transition: all 0.4s ease-in;
+}
+.btn--primary:hover, .btn--primary:focus {
+  background: var(--iron);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 104px;
+  font-family: var(--primary-font);
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  font-family: var(--primary-font);
+  font-weight: normal;
+}
+
+h3 {
+  font-family: var(--secondary-font);
+  font-size: 12px;
+  line-height: 25px;
+  font-weight: 700;
+  letter-spacing: 2.57143px;
+}
+
+h4 {
+  font-family: var(--secondary-font);
+  font-size: 11px;
+  line-height: 25px;
+  /* identical to box height, or 227% */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* setting the root font-size  */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 1.6rem;
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 96rem;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
