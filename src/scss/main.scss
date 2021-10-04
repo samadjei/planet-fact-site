@@ -3,6 +3,8 @@
 @use 'components/buttons' as *;
 @use 'base/typography' as *;
 
+@use 'layout/navigation' as *;
+
 // Importing google fonts
 @import url('https://fonts.googleapis.com/css2?family=Antonio&family=Spartan&display=swap');
 
@@ -27,6 +29,7 @@ body {
 	font-size: 1.6rem;
 	background: var(--dark-blue);
 	color: var(--white);
+	background-image: url('../assets/background-stars.svg');
 }
 
 ul {
@@ -34,6 +37,7 @@ ul {
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 }
 
