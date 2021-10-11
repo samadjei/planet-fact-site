@@ -1,7 +1,7 @@
 $breakpoints: (
-	'phone': 600px,
-	'tablet': 768px,
-	'medium': 960px,
+	'phone': 69rem,
+	'tablet': 76.8rem,
+	'medium': 96rem,
 );
 @mixin breakpoint($point) {
 	// $breakpoint-value: map-get($breakpoints, $size);

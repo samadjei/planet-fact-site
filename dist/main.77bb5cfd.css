@@ -13,6 +13,14 @@
   --topaz: #1ec1a2;
   --blue: #2d68f0;
   --iron: #d8d8d8;
+  --mercury: #def4fc;
+  --venus: #f7cc7f;
+  --earth: #545bfe;
+  --mars: #ff6a45;
+  --jupiter: #ecad7a;
+  --saturn: #fccb6b;
+  --uranus: #65f0d5;
+  --neptune: #497efa;
   --primary-font: "Spartan", sans-serif;
   --secondary-font: "Antonio", sans-serif;
   --font-weight-normal: 400;
@@ -21,22 +29,52 @@
 
 .btn {
   display: inline-block;
+  border: none;
+  cursor: pointer;
+  width: 35rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2.8rem;
+  gap: 2.8rem;
+}
+.btn.active {
+  background-color: var(--celestial-blue);
+  border: 1px solid transparent;
+}
+@media only screen and (max-width: 76.8rem) {
+  .btn {
+    width: 28.1rem;
+    height: 4rem;
+  }
+}
+.btn--text {
   font-family: var(--primary-font);
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: 2.57px;
   line-height: 2.5rem;
-  border-radius: 2.8rem;
-  border: none;
-  cursor: pointer;
   color: var(--white);
   text-transform: uppercase;
+  text-align: left;
+}
+@media only screen and (max-width: 76.8rem) {
+  .btn--text {
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    letter-spacing: 1.93px;
+  }
+}
+.btn--number {
+  opacity: 0.5;
 }
 
 .btn--primary {
   background: transparent;
   color: var(--white);
   transition: all 0.4s ease-in;
+  border: 1px solid var(--white);
 }
 .btn--primary:hover, .btn--primary:focus {
   background: var(--iron);
@@ -51,18 +89,32 @@ h4 {
 }
 
 h1 {
-  font-size: 80px;
-  line-height: 104px;
-  font-family: var(--primary-font);
+  font-size: 8rem;
+  line-height: 10.4rem;
+  font-family: var(--secondary-font);
   font-weight: normal;
+}
+@media only screen and (max-width: 76.8rem) {
+  h1 {
+    font-size: 4.8rem;
+    line-height: 6.2rem;
+  }
 }
 
 h2 {
   font-size: 40px;
   line-height: 52px;
   letter-spacing: -1.5px;
-  font-family: var(--primary-font);
+  font-family: var(--secondary-font);
   font-weight: normal;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 76.8rem) {
+  h2 {
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+    letter-spacing: -0.9px;
+  }
 }
 
 h3 {
@@ -72,14 +124,35 @@ h3 {
   font-weight: 700;
   letter-spacing: 2.57143px;
 }
+@media only screen and (max-width: 76.8rem) {
+  h3 {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.73px;
+  }
+}
 
 h4 {
-  font-family: var(--secondary-font);
-  font-size: 11px;
-  line-height: 25px;
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  line-height: 2.5rem;
   /* identical to box height, or 227% */
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+p {
+  font-family: var(--primary-font);
+  font-weight: var(--font-weight-normal);
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+@media only screen and (max-width: 76.8rem) {
+  p {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
 }
 
 .nav {
@@ -90,7 +163,7 @@ h4 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0 3.2rem;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 76.8rem) {
   .nav {
     flex-direction: column;
     justify-content: center;
@@ -98,9 +171,30 @@ h4 {
     gap: 3.9rem;
   }
 }
+@media only screen and (max-width: 69rem) {
+  .nav {
+    position: relative;
+    height: 6.8rem;
+    align-items: flex-start;
+  }
+}
 .nav__right {
   display: flex;
   gap: 3.3rem;
+}
+@media only screen and (max-width: 69rem) {
+  .nav__right {
+    position: absolute;
+    flex-direction: column;
+    top: 10rem;
+    width: 100%;
+    left: 0;
+    padding: 0rem 2.4rem 6.7rem 2.4rem;
+    z-index: 1;
+    background: var(--dark-blue);
+    gap: 0rem;
+    display: none;
+  }
 }
 .nav--title {
   font-family: var(--secondary-font);
@@ -109,6 +203,16 @@ h4 {
   letter-spacing: -1.05px;
   text-transform: uppercase;
 }
+.nav__item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  height: 6.5rem;
+  width: 100%;
+}
+.nav__item:first-child, .nav__item:last-child {
+  border: none;
+}
 .nav--items {
   font-family: var(--primary-font);
   font-weight: var(--font-weight-bold);
@@ -116,6 +220,160 @@ h4 {
   line-height: 2.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 69rem) {
+  .nav--items {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    letter-spacing: 1.36px;
+    font-weight: var(--font-weight-bold);
+  }
+}
+.nav__hamburger {
+  width: 2.4rem;
+  height: 1.7rem;
+  position: absolute;
+  top: -7rem;
+  right: 5rem;
+  cursor: pointer;
+}
+.nav__hamburger.active {
+  opacity: 0.25;
+}
+.nav__chevron {
+  display: none;
+}
+@media only screen and (max-width: 69rem) {
+  .nav__chevron {
+    display: inline-block;
+    position: absolute;
+    margin-top: 1rem;
+    right: 5rem;
+  }
+}
+.nav__circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 2.5rem;
+  display: none;
+}
+@media only screen and (max-width: 69rem) {
+  .nav__circle {
+    display: inline-block;
+  }
+}
+.nav__mercury {
+  background: var(--mercury);
+}
+.nav__venus {
+  background: var(--venus);
+}
+.nav__earth {
+  background: var(--earth);
+}
+.nav__mars {
+  background: var(--mars);
+}
+.nav__jupiter {
+  background: var(--jupiter);
+}
+.nav__saturn {
+  background: var(--saturn);
+}
+.nav__uranus {
+  background: var(--uranus);
+}
+.nav__neptune {
+  background: var(--neptune);
+}
+
+.planet__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12.6rem;
+  padding-bottom: 8.7rem;
+}
+@media only screen and (max-width: 76.8rem) {
+  .planet__inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14.6rem;
+  }
+}
+.planet__details {
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (max-width: 76.8rem) {
+  .planet__details {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 13rem;
+  }
+}
+.planet__details-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.3rem;
+  padding-bottom: 3.9rem;
+}
+.planet__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.planet--source {
+  opacity: 0.5;
+}
+.planet--link {
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}
+@media only screen and (max-width: 76.8rem) {
+  .planet--description {
+    width: 33.9rem;
+  }
+}
+.planet__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 5.6rem;
+}
+.planet__card {
+  border: 1px solid var(--white);
+  width: 25.5rem;
+  height: 12.8rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2.3rem;
+}
+@media only screen and (max-width: 76.8rem) {
+  .planet__card {
+    width: 16.4rem;
+    height: 8.8rem;
+    padding-left: 1.5rem;
+  }
+}
+.planet__images {
+  position: relative;
+}
+.planet__geology {
+  width: 15.8rem;
+  position: absolute;
+  top: 23rem;
+  left: 6rem;
 }
 
 *,
@@ -151,19 +409,18 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  width: 100%;
-  height: 100%;
-}
-
 .container {
-  width: 96rem;
+  width: 111rem;
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+@media only screen and (max-width: 76.8rem) {
+  .container {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

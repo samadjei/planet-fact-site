@@ -4,6 +4,7 @@
 @use 'base/typography' as *;
 
 @use 'layout/navigation' as *;
+@use 'pages/homepage' as *;
 
 // Importing google fonts
 @import url('https://fonts.googleapis.com/css2?family=Antonio&family=Spartan&display=swap');
@@ -41,17 +42,19 @@ a {
 	text-decoration: none;
 }
 
-img {
-	max-width: 100%;
-	width: 100%;
-	height: 100%;
-}
+// img {
+// 	max-width: 100%;
+// 	width: 100%;
+// }
 
 .container {
-	width: 96rem;
+	width: 111rem;
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
 	padding-left: 2rem;
 	padding-right: 2rem;
+	@include breakpoint(tablet) {
+		width: 100%;
+	}
 }

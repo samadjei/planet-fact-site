@@ -15,16 +15,64 @@
 				<p class="nav--title">The Planets</p>
 			</div>
 			<ul class="nav__right">
-				<li><a class="nav--items" href="#mercury">Mercury</a></li>
-				<li><a class="nav--items" href="#venus">Venus</a></li>
-				<li><a class="nav--items" href="#earth">Earth</a></li>
-				<li><a class="nav--items" href="#mars">Mars</a></li>
-				<li><a class="nav--items" href="#jupiter">Jupiter</a></li>
-				<li><a class="nav--items" href="#saturn">Saturn</a></li>
-				<li><a class="nav--items" href="#uranus">Uranus</a></li>
-				<li><a class="nav--items" href="#neptune">Neptune</a></li>
+				<li class="nav__item"><div class="nav__circle nav__mercury"></div><a class="nav--items" href="#mercury">Mercury <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__venus"></div><a class="nav--items" href="#venus">Venus <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__earth"></div><a class="nav--items" href="#earth">Earth <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__mars"></div><a class="nav--items" href="#mars">Mars <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__jupiter"></div><a class="nav--items" href="#jupiter">Jupiter <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__saturn"></div><a class="nav--items" href="#saturn">Saturn <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__uranus"></div><a class="nav--items" href="#uranus">Uranus <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
+				<li class="nav__item"><div class="nav__circle nav__neptune"></div><a class="nav--items" href="#neptune">Neptune <svg class="nav__chevron" xmlns="http://www.w3.org/2000/svg" width="6" height="8"><path fill="none" stroke="#FFF" opacity=".4" d="M1 0l4 4-4 4"/></svg></a></li>
 			</div>
+			<img class="nav__hamburger" src="../src/assets/icon-hamburger.svg" alt="">
 		</nav>
+
+		<div class="planet">
+			<div class="planet__inner container">
+				<div class="planet__images">
+					<img class="planet__star" src="../src/assets/planet-mercury.svg" alt="Planet">
+					<!-- <img class="planet__star" src="../src/assets/planet-mercury-internal.svg" alt="Planet"> -->
+					<!-- <img class="planet__geology" src="../src/assets/geology-mercury.png" alt="Planet"> -->
+				</div>
+				<div class="planet__details">
+					<div class="planet__details-inner">
+						<h1 class="planet--title">
+							Mercury
+						</h1>
+						<p class="planet--description">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+						<p class="planet--source">Source: <a class="planet--link" href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia </a> <img src="../src/assets/icon-source.svg" alt=""></p>
+					</div>
+					<div class="planet__buttons">
+						<button class="btn btn--primary btn--text active"> <span class="btn--number">01</span> Overview</button>
+						<button class="btn btn--primary btn--text"> <span class="btn--number">02</span> Internal Structure</button>
+						<button class="btn btn--primary btn--text"> <span class="btn--number">03</span> Surface Geology</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="planet__cards container">
+
+				<div class="planet__card">
+					<h4>Rotation Time</h4>
+					<h2>58.6 days</h2>
+				</div>
+				<div class="planet__card">
+					<h4>Revolution Time</h4>
+					<h2>87.97 Days</h2>
+				</div>
+				<div class="planet__card">
+					<h4>Radius</h4>
+					<h2>2,439.7 KM</h2>
+				</div>
+				<div class="planet__card">
+					<h4>Average Temp.</h4>
+					<h2>430°c</h2>
+				</div>
+
+		</div>
+
+
 		<!-- Mercury
 
 		Overview Content Start

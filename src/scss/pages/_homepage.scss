@@ -1,2 +1,96 @@
 @use '../abstracts/' as *;
 
+.planet {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 12.6rem;
+		padding-bottom: 8.7rem;
+
+		@include breakpoint(tablet) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding-top: 14.6rem;
+		}
+	}
+
+	&__details {
+		max-width: 35rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include breakpoint(tablet) {
+			max-width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-top: 13rem;
+		}
+
+		&-inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2.3rem;
+			padding-bottom: 3.9rem;
+		}
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 1.6rem;
+	}
+
+	&--source {
+		opacity: 0.5;
+	}
+
+	&--link {
+		font-weight: var(--font-weight-bold);
+		text-decoration: underline;
+	}
+
+	&--description {
+		@include breakpoint(tablet) {
+			width: 33.9rem;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 3rem;
+		padding-bottom: 5.6rem;
+	}
+
+	&__card {
+		border: 1px solid var(--white);
+		width: 25.5rem;
+		height: 12.8rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
+		padding-left: 2.3rem;
+		@include breakpoint(tablet) {
+			width: 16.4rem;
+			height: 8.8rem;
+			padding-left: 1.5rem;
+		}
+	}
+
+	// Planets
+
+	&__images {
+		position: relative;
+	}
+	&__geology {
+		width: 15.8rem;
+		position: absolute;
+		top: 23rem;
+		left: 6rem;
+	}
+}
