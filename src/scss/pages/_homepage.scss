@@ -27,6 +27,9 @@
 			flex-direction: row;
 			justify-content: space-between;
 			padding-top: 13rem;
+			@include breakpoint(phone) {
+				padding-top: 4.1rem;
+			}
 		}
 
 		&-inner {
@@ -35,12 +38,21 @@
 			justify-content: space-between;
 			gap: 2.3rem;
 			padding-bottom: 3.9rem;
+			@include breakpoint(phone) {
+				text-align: center;
+				padding-bottom: 0rem;
+			}
 		}
 	}
+
+	// Buttons
 	&__buttons {
 		display: flex;
 		flex-direction: column;
 		gap: 1.6rem;
+		@include breakpoint(phone) {
+			display: none;
+		}
 	}
 
 	&--source {
@@ -64,6 +76,11 @@
 		align-items: center;
 		gap: 3rem;
 		padding-bottom: 5.6rem;
+		@include breakpoint(phone) {
+			flex-direction: column;
+			gap: 0.8rem;
+			justify-content: center;
+		}
 	}
 
 	&__card {
@@ -80,9 +97,22 @@
 			height: 8.8rem;
 			padding-left: 1.5rem;
 		}
+		@include breakpoint(phone) {
+			width: 100%;
+			height: 4.8rem;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 4.8rem;
+		}
 	}
 
 	// Planets
+	&__star {
+		@include breakpoint(phone) {
+			max-width: 22.4rem;
+		}
+	}
 
 	&__images {
 		position: relative;
